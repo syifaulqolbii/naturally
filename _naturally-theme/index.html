@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          container: {
-            center: true,
-            padding: "85px",
-          },
-          extend: {
-            colors: {
-              hijau: {
-                100: "#7A9C46",
-                200: "#3C4D27",
-                300: "#1A2310",
-              },
-              kuning: "#FFAA04",
-              hitam: {
-                100: "#A9A9A9",
-                200: "#424242",
-                300: "#121212",
-              },
-            },
-            fontFamily: {
-              playfair: ["Playfair Display", "serif"],
-              work: ["Work Sans", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-      }
-    </style>
-    <title>Naturally</title>
-  </head>
-  <body class="p-4">
-    <header class="bg-[#f0f0f0] pt-8">
-      <div class="container">
-        <nav class="flex items-center justify-between">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: "85px",
+                    },
+                    extend: {
+                        colors: {
+                            hijau: {
+                                100: "#7A9C46",
+                                200: "#3C4D27",
+                                300: "#1A2310",
+                            },
+                            kuning: "#FFAA04",
+                            hitam: {
+                                100: "#A9A9A9",
+                                200: "#424242",
+                                300: "#121212",
+                            },
+                        },
+                        fontFamily: {
+                            playfair: ["Playfair Display", "serif"],
+                            work: ["Work Sans", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+            }
+        </style>
+        <title>Naturally</title>
+    </head>
+    <body class="md:p-4 p-2">
+        <header class="bg-[#f0f0f0] pt-8">
+            <div class="md:container">
+                <!-- <nav class="flex items-center justify-between">
           <a href="#">
             <img class="w-40" src="images/logo.png" alt="logo" />
           </a>
@@ -67,160 +67,317 @@
           >
             Register
           </a>
-        </nav>
-        <div class="mt-[84px]">
-          <div
-            class="flex items-center justify-center text-8xl font-playfair text-hijau-200 gap-6"
-          >
-            <h1>Taking Action</h1>
-            <img src="images/hero.png" class="w-52" alt="hero" />
-            <h1>for</h1>
-          </div>
-          <div
-            class="mt-10 flex justify-center items-center text-8xl font-playfair text-hijau-200 gap-6"
-          >
-            <h1>A Sustainable Future</h1>
-            <div class="w-[52px] rounded-full bg-kuning h-[52px] mt-7"></div>
-          </div>
-          <h1
-            class="text-center pb-32 mt-10 font-work font-normal text-hitam-200 text-2xl"
-          >
-            Climate movement provides resources to reduce impact.
-          </h1>
-        </div>
-      </div>
-    </header>
-    <!-- search section -->
-    <section>
-      <div
-        class="relative -mt-10 rounded-2xl mx-auto flex justify-between items-center w-[839px] bg-white shadow-lg h-20 overflow-hidden"
-      >
-        <div class="pl-8 flex items-center gap-6">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-              stroke="#424242"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M22 22L20 20"
-              stroke="#424242"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <input
-            type="text"
-            name="search"
-            class="pl-2 h-20 placeholder-hitam-100 text-2xl w-[625px] focus:outline-0 focus:text-hitam-200"
-            placeholder="Find your favorite and interest activity or article now! "
-          />
-        </div>
-        <button class="bg-hijau-100 w-32 h-20 text-white font-work text-xl">
-          Search
-        </button>
-      </div>
-    </section>
-    <!-- Activity Section -->
-    <section>
-      <div class="container mt-28">
-        <div class="flex justify-between items-center">
-          <h1 class="font-playfair text-hijau-300 text-[28px] font-medium">
-            Events on Naturally
-          </h1>
-          <a href="#" class="flex items-center gap-2">
-            <h2 class="font-work font-normal text-xl text-hijau-100">
-              Find more
-            </h2>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        </nav> -->
+                <div class="md:mt-[84px] mt-16">
+                    <div
+                        class="flex items-center font-normal justify-center text-4xl md:text-8xl font-playfair text-hijau-200 gap-3 md:gap-6"
+                    >
+                        <h1>Taking Action</h1>
+                        <img
+                            src="images/hero.png"
+                            class="md:w-52 w-24"
+                            alt="hero"
+                        />
+                        <h1>for</h1>
+                    </div>
+                    <div
+                        class="md:mt-10 mt-3 font-normal text-4xl flex justify-center items-center md:text-8xl font-playfair text-hijau-200 gap-3 md:gap-6"
+                    >
+                        <h1>A Sustainable Future</h1>
+                        <div
+                            class="md:w-[52px] w-7 rounded-full bg-kuning h-7 md:h-[52px] mt-3 md:mt-7"
+                        ></div>
+                    </div>
+                    <h1
+                        class="text-center pb-32 md:mt-10 mt-5 font-work font-normal text-hitam-200 text-xs md:text-2xl"
+                    >
+                        Climate movement provides resources to reduce impact.
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <!-- search section -->
+        <section>
+            <div
+                class="relative md:-mt-10 -mt-5 md:rounded-2xl rounded-lg mx-auto flex justify-between items-center w-[350px] md:w-[839px] bg-white shadow-lg h-10 md:h-20 overflow-hidden"
             >
-              <path
-                d="M14.43 5.93L20.5 12L14.43 18.07"
-                stroke="#7A9C46"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M3.5 12H20.33"
-                stroke="#7A9C46"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="flex mt-10 gap-12">
-          <a
-            href="#"
-            class="w-[370px] h-[375px] rounded-lg overflow-hidden shadow-lg"
-          >
-            <div class="w-full h-[222px]">
-              <img src="images/activity1.png" alt="" />
+                <div class="md:pl-8 pl-2 flex items-center gap-2 md:gap-6">
+                    <svg
+                        class="md:w-6 md:h-6 w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M22 22L20 20"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <input
+                        type="text"
+                        name="search"
+                        class="md:pl-2 md:h-20 h-10 placeholder-hitam-100 md:text-2xl text-[10px] md:w-[625px] w-60 focus:outline-0 focus:text-hitam-200"
+                        placeholder="Find your favorite and interest activity or article now! "
+                    />
+                </div>
+                <button
+                    class="bg-hijau-100 md:w-32 w-16 md:h-20 h-10 text-white font-work text-[11px] md:text-xl"
+                >
+                    Search
+                </button>
             </div>
-            <div class="px-6 py-5 font-work font-normal">
-              <div class="flex justify-between text-base">
-                <p class="text-[#E27F00]">17 Feb 2023</p>
-                <p class="text-hitam-100">150 Orang</p>
-              </div>
-              <p class="mt-3 text-xl text-hitam-300 leading-[30px]">
-                Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT Kota Solo
-              </p>
+        </section>
+        <!-- Activity Section -->
+        <section>
+            <div class="md:container px-4 md:mt-28 mt-16">
+                <div class="flex justify-between items-center">
+                    <h1
+                        class="font-playfair text-hijau-300 md:text-[28px] text-2xl font-medium"
+                    >
+                        Events on Naturally
+                    </h1>
+                    <a href="#" class="flex items-center md:gap-2 gap-1">
+                        <h2
+                            class="font-work font-normal md:text-xl text-xs text-hijau-100"
+                        >
+                            Find more
+                        </h2>
+                        <svg
+                            class="md:w-6 md:h-6 h-3 w-3"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M14.43 5.93L20.5 12L14.43 18.07"
+                                stroke="#7A9C46"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M3.5 12H20.33"
+                                stroke="#7A9C46"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <div
+                    class="flex md:mt-10 mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
+                >
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity1.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Feb 2023</p>
+                                <p class="text-hitam-100">150 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT
+                                Kota Solo
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">21 Mei 2023</p>
+                                <p class="text-hitam-100">25 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Menjaga Keasrian Objek Wisata: Waduk Cengklik
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Juni 2023</p>
+                                <p class="text-hitam-100">50 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kegiatan Penjaringan Sampah di Area Jembatan
+                                Jurug
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </a>
-          <a
-            href="#"
-            class="w-[370px] h-[375px] rounded-lg overflow-hidden shadow-lg"
-          >
-            <div class="w-full h-[222px]">
-              <img src="images/activity2.png" alt="" />
+        </section>
+        <!-- News Section -->
+        <section>
+            <div class="md:container px-4 md:mt-28 mt-20">
+                <div class="flex justify-between items-center">
+                    <h1
+                        class="font-playfair text-hijau-300 md:text-[28px] text-2xl font-medium"
+                    >
+                        Article by Naturally
+                    </h1>
+                    <a href="#" class="flex items-center md:gap-2 gap-1">
+                        <h2
+                            class="font-work font-normal md:text-xl text-xs text-hijau-100"
+                        >
+                            Find more
+                        </h2>
+                        <svg
+                            class="md:w-6 md:h-6 h-3 w-3"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M14.43 5.93L20.5 12L14.43 18.07"
+                                stroke="#7A9C46"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M3.5 12H20.33"
+                                stroke="#7A9C46"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <div
+                    class="flex mt-3 md:mt-7 flex-wrap gap-2 md:gap-4 md:px-4 px-2"
+                >
+                    <a
+                        href="#"
+                        class="w-20 md:w-32 h-8 md:h-12 md:text-xl hover:bg-hijau-100 hover:text-white flex items-center justify-center border-[1px] text-hijau-100 text-xs text-center font-work border-hijau-100 rounded-full"
+                        >Popular</a
+                    >
+                    <a
+                        href="#"
+                        class="w-20 md:w-32 h-8 md:h-12 md:text-xl hover:bg-hijau-100 hover:text-white flex items-center justify-center border-[1px] text-hijau-100 text-xs text-center font-work border-hijau-100 rounded-full"
+                        >Climates</a
+                    >
+                    <a
+                        href="#"
+                        class="w-20 md:w-32 h-8 md:h-12 md:text-xl hover:bg-hijau-100 hover:text-white flex items-center justify-center border-[1px] text-hijau-100 text-xs text-center font-work border-hijau-100 rounded-full"
+                        >Animal</a
+                    >
+                    <a
+                        href="#"
+                        class="w-20 md:w-32 h-8 md:h-12 md:text-xl hover:bg-hijau-100 hover:text-white flex items-center justify-center border-[1px] text-hijau-100 text-xs text-center font-work border-hijau-100 rounded-full"
+                        >Trash</a
+                    >
+                </div>
+                <div
+                    class="md:mt-9 mt-4 md:gap-12 gap-6 flex flex-col md:flex-row md:px-4 px-2"
+                >
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/kambing.png" alt="" />
+                        </div>
+                        <div
+                            class="px-6 md:flex md:flex-col md:justify-between py-5 font-work font-normal"
+                        >
+                            <p
+                                class="text-xl md:-mt-6 text-hitam-300 leading-[30px]"
+                            >
+                                Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT
+                                Kota Solo
+                            </p>
+                            <p
+                                class="mt-5 md:mt-[30px] text-base font-normal text-[#7B370C]"
+                            >
+                                Animal
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/sampah.png" alt="" />
+                        </div>
+                        <div
+                            class="px-6 md:flex md:flex-col md:justify-between py-5 font-work font-normal"
+                        >
+                            <p
+                                class="text-xl md:-mt-6 text-hitam-300 leading-[30px]"
+                            >
+                                Pentingnya Mengelola Sampah untuk Kesehatan Bumi
+                            </p>
+                            <p
+                                class="mt-5 md:mt-[30px] text-base font-normal text-[#7B370C]"
+                            >
+                                Trash
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/sampah.png" alt="" />
+                        </div>
+                        <div
+                            class="px-6 md:flex md:flex-col md:justify-between py-5 font-work font-normal"
+                        >
+                            <p
+                                class="text-xl md:-mt-6 text-hitam-300 leading-[30px]"
+                            >
+                                Pemanasan Global Dapat Dihentikan: Apa Mungkin?
+                            </p>
+                            <p
+                                class="mt-5 md:mt-[30px] text-base font-normal text-[#7B370C]"
+                            >
+                                Climate
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="px-6 py-5 font-work font-normal">
-              <div class="flex justify-between text-base">
-                <p class="text-[#E27F00]">21 Mei 2023</p>
-                <p class="text-hitam-100">25 Orang</p>
-              </div>
-              <p class="mt-3 text-xl text-hitam-300 leading-[30px]">
-                Menjaga Keasrian Objek Wisata: Waduk Cengklik
-              </p>
-            </div>
-          </a>
-          <a
-            href="#"
-            class="w-[370px] h-[375px] rounded-lg overflow-hidden shadow-lg"
-          >
-            <div class="w-full h-[222px]">
-              <img src="images/activity2.png" alt="" />
-            </div>
-            <div class="px-6 py-5 font-work font-normal">
-              <div class="flex justify-between text-base">
-                <p class="text-[#E27F00]">17 Juni 2023</p>
-                <p class="text-hitam-100">50 Orang</p>
-              </div>
-              <p class="mt-3 text-xl text-hitam-300 leading-[30px]">
-                Kegiatan Penjaringan Sampah di Area Jembatan Jurug
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </body>
+        </section>
+    </body>
 </html>
