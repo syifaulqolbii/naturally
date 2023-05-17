@@ -44,65 +44,13 @@
             <div
                 class="flex md:mt-10 mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
             >
-                <a
-                    href="#"
-                    class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
-                >
-                    <div class="w-full md:h-[222px]">
-                        <img src="images/activity1.png" alt=""/>
-                    </div>
-                    <div class="px-6 py-5 font-work font-normal">
-                        <div class="flex justify-between text-base">
-                            <p class="text-[#E27F00]">17 Feb 2023</p>
-                            <p class="text-hitam-100">150 Orang</p>
-                        </div>
-                        <p
-                            class="mt-3 text-xl text-hitam-300 leading-[30px]"
-                        >
-                            Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT
-                            Kota Solo
-                        </p>
-                    </div>
-                </a>
-                <a
-                    href="#"
-                    class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
-                >
-                    <div class="w-full md:h-[222px]">
-                        <img src="images/activity2.png" alt=""/>
-                    </div>
-                    <div class="px-6 py-5 font-work font-normal">
-                        <div class="flex justify-between text-base">
-                            <p class="text-[#E27F00]">21 Mei 2023</p>
-                            <p class="text-hitam-100">25 Orang</p>
-                        </div>
-                        <p
-                            class="mt-3 text-xl text-hitam-300 leading-[30px]"
-                        >
-                            Menjaga Keasrian Objek Wisata: Waduk Cengklik
-                        </p>
-                    </div>
-                </a>
-                <a
-                    href="#"
-                    class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
-                >
-                    <div class="w-full md:h-[222px]">
-                        <img src="images/activity2.png" alt=""/>
-                    </div>
-                    <div class="px-6 py-5 font-work font-normal">
-                        <div class="flex justify-between text-base">
-                            <p class="text-[#E27F00]">17 Juni 2023</p>
-                            <p class="text-hitam-100">50 Orang</p>
-                        </div>
-                        <p
-                            class="mt-3 text-xl text-hitam-300 leading-[30px]"
-                        >
-                            Kegiatan Penjaringan Sampah di Area Jembatan
-                            Jurug
-                        </p>
-                    </div>
-                </a>
+                @unless(count($events) == 0)
+                    @foreach($events as $event)
+                        <x-event-card :event="$event"/>
+                    @endforeach
+                @else
+                    <p class="text-center">No events found</p>
+                @endunless
             </div>
         </div>
     </section>
