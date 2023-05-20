@@ -28,7 +28,7 @@
             <input
                 type="text"
                 name="search"
-                class="md:pl-2 md:h-20 h-10 placeholder-hitam-100 md:text-2xl text-[10px] md:w-[625px] w-60 focus:outline-0 focus:text-hitam-200"
+                class="search-form md:pl-2 md:h-20 h-10 placeholder-hitam-100 md:text-2xl text-[10px] md:w-[625px] w-60 focus:outline-0 focus:text-hitam-200"
                 placeholder="Find your favorite and interest activity or article now! "
             />
         </div>
