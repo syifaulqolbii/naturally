@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: "85px",
+                    },
+                    extend: {
+                        colors: {
+                            hijau: {
+                                100: "#7A9C46",
+                                200: "#3C4D27",
+                                300: "#1A2310",
+                            },
+                            kuning: "#FFAA04",
+                            emas: "#A98032",
+                            hitam: {
+                                100: "#A9A9A9",
+                                200: "#424242",
+                                300: "#121212",
+                            },
+                        },
+                        fontFamily: {
+                            playfair: ["Playfair Display", "serif"],
+                            work: ["Work Sans", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+            }
+        </style>
+        <title>Article</title>
+    </head>
+    <body class="md:p-4 p-2">
+        <header class="bg-[#fafafa] pt-8">
+            <div class="md:container">
+                <nav class="flex items-center justify-between">
+                    <a href="#">
+                        <img class="w-40" src="images/logo.png" alt="logo" />
+                    </a>
+                    <div
+                        class="flex gap-[69px] text-hitam-200 text-xl font-work font-normal"
+                    >
+                        <a href="#" class="hover:font-medium">Home</a>
+                        <a href="#" class="hover:font-medium">Activity</a>
+                        <a href="#" class="hover:font-medium">Article</a>
+                        <a href="#" class="hover:font-medium">About</a>
+                    </div>
+                    <a
+                        href="#"
+                        class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+                    >
+                        Register
+                    </a>
+                </nav>
+                <div
+                    class="flex flex-col items-center justify-center pt-[100px] gap-6"
+                >
+                    <h1 class="font-playfair text-[64px] text-emas">
+                        Activity on Naturally
+                    </h1>
+                    <p class="font-work text-[24px]">
+                        Find your preference activities to gain experience!
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!-- search section -->
+        <section class="bg-[#fafafa] pt-16">
+            <div class="flex flex-col items-center justify-center gap-6">
+                <div
+                    class="border rounded-lg w-[1000px] pl-8 py-4 border-hitam-100 flex items-center gap-6"
+                >
+                    <svg
+                        class="md:w-6 md:h-6 w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M22 22L20 20"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <input
+                        type="text"
+                        placeholder="Any keyword?"
+                        class="bg-[#fafafa] font-work text-xl placeholder-hitam-100 h-7 focus:outline-0 focus:text-hitam-200"
+                    />
+                </div>
+                <div
+                    class="font-work text-sm text-hijau-200 flex gap-6 items-center justify-center"
+                >
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Kerja Bakti</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Peternakan</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Bencana alam</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Wisata</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Sampah</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Pantai</p>
+                        <button>X</button>
+                    </div>
+                    <div
+                        class="flex gap-1 items-center border rounded-md border-hijau-200 p-1 px-3"
+                    >
+                        <p>Perkebunan</p>
+                        <button>X</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- activity section -->
+        <section class="bg-[#fafafa] pt-16 flex flex-col items-center">
+            <div class="md:container px-4">
+                <div class="flex justify-between items-center">
+                    <h1
+                        class="font-playfair text-hijau-300 md:text-[28px] text-2xl font-medium"
+                    >
+                        Activity on Naturally
+                    </h1>
+                </div>
+                <div
+                    class="flex md:mt-10 mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full justify-center"
+                >
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity1.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Feb 2023</p>
+                                <p class="text-hitam-100">150 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT
+                                Kota Solo
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">21 Mei 2023</p>
+                                <p class="text-hitam-100">25 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Menjaga Keasrian Objek Wisata: Waduk Cengklik
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Juni 2023</p>
+                                <p class="text-hitam-100">50 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kegiatan Penjaringan Sampah di Area Jembatan
+                                Jurug
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div
+                    class="flex md:mt-10 mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full justify-center"
+                >
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity1.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Feb 2023</p>
+                                <p class="text-hitam-100">150 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kerja Bakti Hutan Kota Manahan Dalam Rangka HUT
+                                Kota Solo
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">21 Mei 2023</p>
+                                <p class="text-hitam-100">25 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Menjaga Keasrian Objek Wisata: Waduk Cengklik
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="#"
+                        class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+                    >
+                        <div class="w-full md:h-[222px]">
+                            <img src="images/activity2.png" alt="" />
+                        </div>
+                        <div class="px-6 py-5 font-work font-normal">
+                            <div class="flex justify-between text-base">
+                                <p class="text-[#E27F00]">17 Juni 2023</p>
+                                <p class="text-hitam-100">50 Orang</p>
+                            </div>
+                            <p
+                                class="mt-3 text-xl text-hitam-300 leading-[30px]"
+                            >
+                                Kegiatan Penjaringan Sampah di Area Jembatan
+                                Jurug
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="py-16">
+                <button
+                    class="border rounded-lg border-hijau-100 text-hijau-100 font-work text-2xl py-3 px-8"
+                >
+                    Find more
+                </button>
+            </div>
+        </section>
+    </body>
+</html>
