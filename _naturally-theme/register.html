@@ -44,7 +44,7 @@
             @layer utilities {
             }
         </style>
-        <title>Login</title>
+        <title>Register</title>
     </head>
     <body class="md:p-4 p-2">
         <header class="pt-8">
@@ -57,7 +57,7 @@
                         href="#"
                         class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
                     >
-                        Register
+                        Login
                     </a>
                 </nav>
             </div>
@@ -65,16 +65,21 @@
         <div class="pt-14">
             <div class="flex flex-col items-center justify-center gap-4">
                 <img src="images/logo-daun.png" alt="" class="w-16" />
-                <h1 class="font-playfair text-[32px]">Welcome to Naturally</h1>
-                <p class="font-work text-[16px]">
-                    Login to Naturally to get unforgetable experience!
-                </p>
+                <h1 class="font-playfair text-[32px]">Register to Naturally</h1>
+                <p class="font-work text-[16px]">Create account to join us!</p>
             </div>
         </div>
         <!-- login section -->
         <section class="p-14">
             <div class="flex flex-col items-center font-work text-xl">
                 <div class="flex flex-col w-[40%] gap-4">
+                    <p>Name</p>
+                    <input
+                        type="text"
+                        class="rounded-xl h-16 bg-[#f1f1f1] focus:outline-0 focus:ring-1 focus:ring-hijau-200 px-4"
+                    />
+                </div>
+                <div class="flex flex-col w-[40%] gap-4 pt-6">
                     <p>Email</p>
                     <input
                         type="text"
@@ -89,12 +94,12 @@
                     />
                 </div>
                 <button class="bg-hijau-200 p-5 w-[40%] rounded-xl mt-12">
-                    <a href="#" class="text-[#ffffff]">Login</a>
+                    <a href="#" class="text-[#ffffff]">Register</a>
                 </button>
                 <div class="flex pt-16 text-base">
-                    <p class="text-[#717171]">Have no account?</p>
+                    <p class="text-[#717171]">Already have an account?</p>
                     &nbsp;
-                    <a href="#" class="text-hijau-100">Register!</a>
+                    <a href="#" class="text-hijau-100">Log in!</a>
                 </div>
             </div>
         </section>
