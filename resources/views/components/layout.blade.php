@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
         rel="stylesheet"
     />
+    <script src="//unpkg.com/alpinejs" defer></script>
 
     <title>Naturally</title>
 </head>
@@ -21,5 +22,6 @@
     {{$slot}}
 </main>
 
+<x-flash-message/>
 </body>
 </html>

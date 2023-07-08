@@ -1,11 +1,11 @@
 @props(['event'])
 
 <a
-    href="#"
+    href="/event/{{$event->id}}"
     class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
 >
     <div class="w-full md:h-[222px]">
-        <img src="{{asset('images/hero.png')}}" alt=""/>
+        <img src="{{$event->image ? asset('storage/'.$event->image) : asset('images/hero.png')}}" alt=""/>
     </div>
     <div class="px-6 py-5 font-work font-normal">
         <div class="flex justify-between text-base">
