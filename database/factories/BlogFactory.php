@@ -26,3 +26,4 @@ class BlogFactory extends Factory
         ];
     }
 }
+

@@ -1,8 +1,6 @@
 <!-- search section -->
 <section>
     <form action="/">
-
-
         <div
             class="relative md:-mt-10 -mt-5 md:rounded-2xl rounded-lg mx-auto flex justify-between items-center w-[350px] md:w-[839px] bg-white shadow-lg h-10 md:h-20 overflow-hidden"
         >

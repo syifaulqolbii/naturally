@@ -12,7 +12,6 @@
         rel="stylesheet"
     />
     <script src="//unpkg.com/alpinejs" defer></script>
-
     <title>Naturally</title>
 </head>
 <body class="md:p-4 p-2">

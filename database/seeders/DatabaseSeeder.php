@@ -5,7 +5,9 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Blog;
 use App\Models\Event;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,5 +24,17 @@ class DatabaseSeeder extends Seeder
         // ]);
         Event::factory(10)->create();
         Blog::factory(10)->create();
+        DB::table('tags')->insert([
+            'tag' => 'Popular',
+        ]);
+        DB::table('tags')->insert([
+            'tag' => 'Climates',
+        ]);
+        DB::table('tags')->insert([
+            'tag' => 'Animal',
+        ]);
+        DB::table('tags')->insert([
+            'tag'=> 'Trash',
+        ]);
     }
 }
