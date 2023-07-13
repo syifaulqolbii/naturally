@@ -40,10 +40,18 @@ Route::delete('/event/{event}', [EventController::class, 'destroy']);
 Route::get('/blog/create', [BlogController::class, 'create']);
 // store blog
 Route::post('/blog', [BlogController::class, 'store']);
+// show edit blog form
+Route::get('/blog/{blog}/edit', [BlogController::class, 'edit']);
+// update blog
+Route::put('/blog/{blog}', [BlogController::class, 'update']);
+// delete blog
+Route::delete('/blog/{blog}', [BlogController::class, 'destroy']);
 
 
 
 
+// show blog detail
+Route::get('/blog/{blog}', [BlogController::class, 'show']);
 // show event detail
 Route::get('/event/{event}', [EventController::class, 'show']);
 
