@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // show home page
-Route::get('/', function () {
-    return view('index' , [
-        'events' => \App\Models\Event::latest()->filter(request(['search']))->simplePaginate(3),
-        'blogs' => \App\Models\Blog::latest()->filter(request(['search']))->simplePaginate(3),
-        'tags' => \App\Models\Tag::all(),
-    ]);
-});
+Route::get('/', [HomeController::class, 'index']);
 
 // show create form
 Route::get('/event/create', [EventController::class, 'create']);

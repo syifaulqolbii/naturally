@@ -17,6 +17,10 @@ class Blog extends Model
                 ->orWhere('tag', 'like', '%' . request('search') . '%')
                 ->orWhere('article', 'like', '%' . request('search') . '%');
         }
+
+        if ($filters['tag'] ?? false) {
+            $query->where('tag', 'like', '%' . request('tag') . '%');
+        }
     }
 
     public function tags()
