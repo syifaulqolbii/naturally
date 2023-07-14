@@ -10,10 +10,28 @@
         <a href="#" class="hover:font-medium">Article</a>
         <a href="#" class="hover:font-medium">About</a>
     </div>
-    <a
-        href="#"
-        class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
-    >
-        Register
-    </a>
+    @auth()
+        <a
+            href="/profile/{{auth()->user()->id}}"
+            class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+        >
+            Profile
+        </a>
+        <form action="/logout" method="post">
+            @csrf
+            @method('POST')
+            <button
+                type="submit"
+                class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+            >
+                Logout
+            </button>
+    @else
+        <a
+            href="/registerForm"
+            class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+        >
+            Register
+        </a>
+    @endauth
 </nav>

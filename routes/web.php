@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,10 +44,20 @@ Route::delete('/blog/{blog}', [BlogController::class, 'destroy']);
 
 
 
-
 // show blog detail
 Route::get('/blog/{blog}', [BlogController::class, 'show']);
 // show event detail
 Route::get('/event/{event}', [EventController::class, 'show']);
+
+// show register form
+Route::get('/registerForm', [UserController::class, 'create']);
+// store new user
+Route::post('/users', [UserController::class, 'store']);
+//logout user
+Route::post('/logout', [UserController::class, 'logout']);
+//login user form
+Route::get('/loginForm', [UserController::class, 'loginForm']);
+//login user
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 require __DIR__.'/auth.php';
