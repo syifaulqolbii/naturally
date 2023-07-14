@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: "85px",
+                    },
+                    extend: {
+                        colors: {
+                            hijau: {
+                                100: "#7A9C46",
+                                200: "#3C4D27",
+                                300: "#1A2310",
+                            },
+                            kuning: "#FFAA04",
+                            emas: "#A98032",
+                            hitam: {
+                                100: "#A9A9A9",
+                                200: "#424242",
+                                300: "#121212",
+                            },
+                        },
+                        fontFamily: {
+                            playfair: ["Playfair Display", "serif"],
+                            work: ["Work Sans", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+            }
+        </style>
+        <title>Article Detail</title>
+    </head>
+    <body class="md:p-4 p-2 md:container bg-white">
+        <header class="sm:pt-8">
+            <div>
+                <nav class="flex items-center justify-between px-24">
+                    <a href="#">
+                        <img class="w-40" src="images/logo.png" alt="logo" />
+                    </a>
+                    <div
+                        class="flex gap-[69px] text-hitam-200 text-xl font-work font-normal"
+                    >
+                        <a href="#" class="hover:font-medium">Home</a>
+                        <a href="#" class="hover:font-medium">Activity</a>
+                        <a href="#" class="hover:font-medium">Article</a>
+                        <a href="#" class="hover:font-medium">About</a>
+                    </div>
+                    <a
+                        href="#"
+                        class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+                    >
+                        Register
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <section class="pt-12">
+            <div class="flex items-start gap-12 justify-center">
+                <div class="w-[452px] h-[737px] relative">
+                    <img
+                        src="images/kambing.png"
+                        alt="gambar"
+                        class="absolute inset-0 object-cover w-full h-full rounded-2xl"
+                    />
+                </div>
+                <div class="flex flex-col gap-8">
+                    <div class="flex items-center font-work">
+                        <a
+                            href=""
+                            class="px-6 py-3 bg-[#7B370C] rounded-full text-base text-white mr-6"
+                            >Animal</a
+                        >
+                        <div
+                            class="text-hitam-200 text-xl flex items-center gap-2"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                            >
+                                <path
+                                    d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                    stroke="#7B370C"
+                                    stroke-width="1.1"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                    stroke="#7B370C"
+                                    stroke-width="1.1"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p class="">122K Readers</p>
+                        </div>
+                    </div>
+                    <div
+                        class="font-work flex flex-col w-[731px] gap-5 overflow-y-auto h-screen pr-5"
+                    >
+                        <h1 class="text-4xl w-[565px] text-hitam-300">
+                            Peternakan Menjadi Salah Satu Penyebab Pemanasan
+                            Global!
+                        </h1>
+                        <p
+                            class="text-hitam-200 text-xl indent-8 text-justify leading-8"
+                        >
+                            Gas rumah kaca yang dilepaskan ke atmosfer menjadi
+                            penyebab Bumi menjadi lebih hangat dalam beberapa
+                            abad terakhir. Terdapat berbagai macam gas rumah
+                            kaca, salah satunya metana (CH4). Metana adalah gas
+                            rumah kaca yang paling melimpah kedua setelah karbon
+                            dioksida. Hasil studi menyebut metana memerangkap
+                            panas kira-kira 30 kali lebih banyak daripada karbon
+                            dioksida. Metana di udara di antaranya disumbang
+                            oleh sapi. Sapi menghasilkan metana dalam dua cara
+                            utama, melalui pencernaannya dan melalui kotorannya.
+                            Melansir lets talk science, metana membentuk sekitar
+                            setengah dari total gas rumah kaca yang dikeluarkan
+                            sektor itu.
+                        </p>
+                        <p
+                            class="text-hitam-200 text-xl indent-8 text-justify leading-8"
+                        >
+                            Ada beberapa jenis makanan yang membuat spai
+                            menghasilkan metana lebih banyak. Misalnya, mencerna
+                            jerami dan rumput menghasilkan lebih banyak metana
+                            daripada jagung. Para ilmuwan sedang mempelajari
+                            alternatif pakan sapi yang dapat menghasilkan lebih
+                            sedikit metana. Misalnya, para ilmuwan mencoba
+                            menambahkan rumput laut ke makanan sapi. Mereka
+                            berharap rumput laut dapat menghambat enzim tertentu
+                            yang terlibat dalam produksi metana.
+                        </p>
+                        <p
+                            class="text-hitam-200 text-xl indent-8 text-justify leading-8"
+                        >
+                            Ada beberapa jenis makanan yang membuat spai
+                            menghasilkan metana lebih banyak. Misalnya, mencerna
+                            jerami dan rumput menghasilkan lebih banyak metana
+                            daripada jagung. Para ilmuwan sedang mempelajari
+                            alternatif pakan sapi yang dapat menghasilkan lebih
+                            sedikit metana. Misalnya, para ilmuwan mencoba
+                            menambahkan rumput laut ke makanan sapi. Mereka
+                            berharap rumput laut dapat menghambat enzim tertentu
+                            yang terlibat dalam produksi metana.
+                        </p>
+                        <p
+                            class="text-hitam-200 text-xl indent-8 text-justify leading-8"
+                        >
+                            Ada beberapa jenis makanan yang membuat spai
+                            menghasilkan metana lebih banyak. Misalnya, mencerna
+                            jerami dan rumput menghasilkan lebih banyak metana
+                            daripada jagung. Para ilmuwan sedang mempelajari
+                            alternatif pakan sapi yang dapat menghasilkan lebih
+                            sedikit metana. Misalnya, para ilmuwan mencoba
+                            menambahkan rumput laut ke makanan sapi. Mereka
+                            berharap rumput laut dapat menghambat enzim tertentu
+                            yang terlibat dalam produksi metana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
