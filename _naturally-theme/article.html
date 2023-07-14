@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: "85px",
+                    },
+                    extend: {
+                        colors: {
+                            hijau: {
+                                100: "#7A9C46",
+                                200: "#3C4D27",
+                                300: "#1A2310",
+                            },
+                            kuning: "#FFAA04",
+                            emas: "#A98032",
+                            hitam: {
+                                100: "#A9A9A9",
+                                200: "#424242",
+                                300: "#121212",
+                            },
+                        },
+                        fontFamily: {
+                            playfair: ["Playfair Display", "serif"],
+                            work: ["Work Sans", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+            }
+        </style>
+        <title>Article</title>
+    </head>
+    <body class="md:p-4 p-2 md:container bg-[#fafafa]">
+        <header class="sm:pt-8">
+            <div>
+                <nav class="flex items-center justify-between px-24">
+                    <a href="#">
+                        <img class="w-40" src="images/logo.png" alt="logo" />
+                    </a>
+                    <div
+                        class="flex gap-[69px] text-hitam-200 text-xl font-work font-normal"
+                    >
+                        <a href="#" class="hover:font-medium">Home</a>
+                        <a href="#" class="hover:font-medium">Activity</a>
+                        <a href="#" class="hover:font-medium">Article</a>
+                        <a href="#" class="hover:font-medium">About</a>
+                    </div>
+                    <a
+                        href="#"
+                        class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+                    >
+                        Register
+                    </a>
+                </nav>
+                <div
+                    class="flex flex-col items-center px-4 justify-center pt-[100px] gap-6"
+                >
+                    <h1 class="font-playfair text-emas text-4xl sm:text-[64px]">
+                        Article on Naturally
+                    </h1>
+                    <p class="font-work text-hitam-200 text-sm sm:text-[24px]">
+                        Find your preference articles to earn knowledge!
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!-- article section -->
+        <section class="bg-[#fafafa] pt-20 flex flex-col">
+            <div class="flex gap-4 pl-24">
+                <a
+                    href="#"
+                    class="border border-hijau-100 text-hijau-100 px-6 py-3 rounded-full hover:bg-hijau-100 hover:text-white font-work text-xl"
+                    >Popular</a
+                >
+                <a
+                    href="#"
+                    class="border border-hijau-100 text-hijau-100 px-6 py-3 rounded-full hover:bg-hijau-100 hover:text-white font-work text-xl"
+                    >Climate</a
+                >
+                <a
+                    href="#"
+                    class="border border-hijau-100 text-hijau-100 px-6 py-3 rounded-full hover:bg-hijau-100 hover:text-white font-work text-xl"
+                    >Animal</a
+                >
+                <a
+                    href="#"
+                    class="border border-hijau-100 text-hijau-100 px-6 py-3 rounded-full hover:bg-hijau-100 hover:text-white font-work text-xl"
+                    >Trash</a
+                >
+            </div>
+            <div class="flex gap-12 pt-12 justify-center">
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/kambing.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Peternakan Menjadi Salah Satu Penyebab Pemanasan
+                            Global!
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Animal</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/sampah.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Pentingnya Mengelola Sampah untuk Kesehatan Bumi
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Trash</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/hutan.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Pemanasan Global Dapat Dihentikan: Apa Mungkin?
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Climate</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex gap-12 pt-12 justify-center">
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/kambing.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Peternakan Menjadi Salah Satu Penyebab Pemanasan
+                            Global!
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Animal</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/sampah.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Pentingnya Mengelola Sampah untuk Kesehatan Bumi
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Trash</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    href="#"
+                    class="bg-white w-[370px] h-[375px] rounded-lg flex flex-col gap-5 shadow-lg"
+                >
+                    <img
+                        src="images/hutan.png"
+                        alt=""
+                        class="rounded-t-lg w-full h-56"
+                    />
+                    <div class="flex flex-col font-work px-6 gap-8">
+                        <p class="text-xl">
+                            Pemanasan Global Dapat Dihentikan: Apa Mungkin?
+                        </p>
+                        <div
+                            class="flex justify-between items-center text-base"
+                        >
+                            <p class="text-hijau-100">Climate</p>
+                            <div class="flex items-center gap-1 text-hitam-100">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12.9833 10C12.9833 11.65 11.6499 12.9833 9.99993 12.9833C8.34993 12.9833 7.0166 11.65 7.0166 10C7.0166 8.35 8.34993 7.01666 9.99993 7.01666C11.6499 7.01666 12.9833 8.35 12.9833 10Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10.0001 16.8917C12.9418 16.8917 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00834 17.5918 7.83334C15.6834 4.83334 12.9418 3.10001 10.0001 3.10001C7.05845 3.10001 4.31678 4.83334 2.40845 7.83334C1.65845 9.00834 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8917 10.0001 16.8917Z"
+                                        stroke="#A9A9A9"
+                                        stroke-width="1.1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <p>122K</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sm:py-16 py-8 flex justify-center">
+                <button
+                    class="border rounded-lg border-hijau-100 text-hijau-100 font-work text-xl py-1 px-4 sm:text-2xl sm:py-3 sm:px-8 hover:bg-hijau-100 hover:text-white"
+                >
+                    Find more
+                </button>
+            </div>
+        </section>
+        <!-- search section -->
+        <section class="pt-16 bg-[#f8f8f8] h-96">
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="font-work text-3xl font-semibold">
+                    Still can’t find your preferences?
+                </h1>
+                <p class="font-work text-base font-medium pt-2 pb-12">
+                    Write down your thought below!
+                </p>
+                <div
+                    class="border rounded-lg w-[80%] sm:h-16 h-9 sm:pl-8 pl-4 py-4 border-hitam-100 flex items-center gap-3 sm:gap-6"
+                >
+                    <svg
+                        class="md:w-6 md:h-6 w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M22 22L20 20"
+                            stroke="#424242"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <input
+                        type="text"
+                        placeholder="Any keyword?"
+                        class="bg-[#f8f8f8] font-work text-lg sm:text-xl placeholder-hitam-100 w-full focus:outline-0 focus:text-hitam-200"
+                    />
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
