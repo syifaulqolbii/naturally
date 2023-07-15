@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -34,7 +35,23 @@ class DatabaseSeeder extends Seeder
             'tag' => 'Animal',
         ]);
         DB::table('tags')->insert([
-            'tag'=> 'Trash',
+            'tag' => 'Trash',
         ]);
+        User::factory()->create(
+            [
+                'name' => 'Admin',
+                'email' => 'admin@mail.com',
+                'password' => bcrypt('admin'),
+                'role' => 1,
+            ]
+        );
+        User::factory()->create(
+            [
+                'name' => 'User',
+                'email' => 'user@mail.com',
+                'password' => bcrypt('user'),
+                'role' => 0,
+            ]
+        );
     }
 }
