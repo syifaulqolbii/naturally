@@ -21,6 +21,7 @@ module.exports = {
                     300: "#1A2310",
                 },
                 kuning: "#FFAA04",
+                emas: "#A98032",
                 hitam: {
                     100: "#A9A9A9",
                     200: "#424242",

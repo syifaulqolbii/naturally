@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+
+    // show articles page
+    public function index()
+    {
+        return view('blogs.index', [
+            'blogs' => Blog::latest()->filter(request(['search', 'tag']))->simplePaginate(6),
+            'tags' => Tag::all()
+        ]);
+    }
     public function create()
     {
         $tags = Tag::all();

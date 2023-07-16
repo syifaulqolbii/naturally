@@ -10,7 +10,7 @@
                 >
                     Events on Naturally
                 </h1>
-                <a href="#" class="flex items-center md:gap-2 gap-1">
+                <a href="/moreEvents" class="flex items-center md:gap-2 gap-1">
                     <h2
                         class="font-work font-normal md:text-xl text-xs text-hijau-100"
                     >
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div
-                class="flex md:mt-10 mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
+                class="flex md:mt-10 flex-wrap justify-center mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
             >
                 @unless(count($events) == 0)
                     @foreach($events as $event)
@@ -57,14 +57,14 @@
 
     <!-- News Section -->
     <section>
-        <div class="md:container px-4 md:mt-28 mt-20">
+        <div class="md:container px-4 md:mt-28 mt-20 mb-24">
             <div class="flex justify-between items-center">
                 <h1
                     class="font-playfair text-hijau-300 md:text-[28px] text-2xl font-medium"
                 >
                     Article by Naturally
                 </h1>
-                <a href="#" class="flex items-center md:gap-2 gap-1">
+                <a href="/moreArticle" class="flex items-center md:gap-2 gap-1">
                     <h2
                         class="font-work font-normal md:text-xl text-xs text-hijau-100"
                     >
@@ -119,4 +119,5 @@
             </div>
         </div>
     </section>
+    @include('partials._footer')
 </x-layout>

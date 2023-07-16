@@ -18,8 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Guest routes
 // show home page
 Route::get('/', [HomeController::class, 'index']);
+// show activity page
+Route::get('/moreEvents', [EventController::class, 'index']);
+// show articles page
+Route::get('/moreArticle', [BlogController::class, 'index']);
 
 // Admin routes
 Route::middleware(['auth', 'user-role:admin'])->group(function () {

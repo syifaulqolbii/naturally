@@ -34,6 +34,15 @@ class DatabaseSeeder extends Seeder
         );
         Event::factory()->create(
             [
+                'name' => 'Membersihkan Taman Raya',
+                'date' => '2023-08-24',
+                'quota' => 100,
+                'location' => 'Taman Raya Kota',
+                'description' => 'Kegiatan Membersihkan Taman Kota adalah sebuah kegiatan yang bertujuan untuk membersihkan taman kota dari sampah dan menjaga kebersihannya. Kegiatan ini dijadwalkan akan dilaksanakan pada tanggal 15 Agustus 2023 di Taman Kota ABC. Para peserta akan berkumpul di lokasi tersebut untuk bekerja sama membersihkan taman, mengumpulkan sampah, dan merapikan area sekitar. Selain itu, kegiatan ini juga akan menyampaikan edukasi kepada peserta mengenai pentingnya menjaga kebersihan lingkungan dan mengurangi sampah plastik. Peserta diharapkan membawa peralatan pembersih seperti sarung tangan, kantong sampah, dan alat kebersihan lainnya. Kegiatan ini merupakan kesempatan bagi masyarakat untuk berkontribusi dalam menjaga keindahan dan kebersihan taman kota, serta meningkatkan kesadaran akan pentingnya menjaga kebersihan lingkungan secara keseluruhan. Mari kita bergabung dan berkontribusi dalam menciptakan lingkungan yang lebih baik untuk kita semua!',
+            ]
+        );
+        Event::factory()->create(
+            [
                 'name' => 'Pembersihan Pantai',
                 'date' => '2023-09-10',
                 'quota' => 30,

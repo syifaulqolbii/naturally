@@ -6,8 +6,8 @@
         class="flex gap-[69px] text-hitam-200 text-xl font-work font-normal"
     >
         <a href="/" class="hover:font-medium">Home</a>
-        <a href="#" class="hover:font-medium">Activity</a>
-        <a href="#" class="hover:font-medium">Article</a>
+        <a href="/moreEvents" class="hover:font-medium">Activity</a>
+        <a href="/moreArticle" class="hover:font-medium">Article</a>
         <a href="#" class="hover:font-medium">About</a>
     </div>
     @auth()

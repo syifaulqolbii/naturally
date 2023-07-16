@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -17,4 +18,6 @@ class HomeController extends Controller
             'tags' => Tag::all()
         ]);
     }
+
+
 }

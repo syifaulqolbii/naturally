@@ -1,4 +1,4 @@
-<header class="bg-[#f0f0f0] pt-8">
+<header class="bg-[#f0f0f0] pt-8 md:mx-4 md:mt-4 mx-2 mt-2">
     <div class="md:container">
         @include('partials._navbar')
         <div class="md:mt-[84px] mt-16">

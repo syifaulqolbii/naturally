@@ -14,8 +14,7 @@ class Blog extends Model
     {
         if ($filters['search'] ?? false) {
             $query->where('title', 'like', '%' . request('search') . '%')
-                ->orWhere('tag', 'like', '%' . request('search') . '%')
-                ->orWhere('article', 'like', '%' . request('search') . '%');
+                ->orWhere('tag', 'like', '%' . request('search') . '%');
         }
 
         if ($filters['tag'] ?? false) {

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    // show home page
+    // show activity page
     public function index()
     {
         return view('events.index', [
@@ -15,11 +15,14 @@ class EventController extends Controller
         ]);
     }
 
-    public function show(Event $event){
-        return view('events.show', [
-            'event' => $event
-        ]);
+
+    public function show(Event $event)
+    {
+        $dateFromDatabase = $event->date;
+
+        return view('events.show', compact('event', 'dateFromDatabase'));
     }
+
 
     // show create form
     public function create()
