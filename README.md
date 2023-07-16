@@ -26,6 +26,20 @@ Upload the files to your document root, Valet folder or run
 ```
 php artisan serve
 ```
+
+## Refresh Migration & Seeding
+To refresh the migrations and seed the database again, run the following
+```
+php artisan migrate:refresh --seed
+```
+
+
+## Built With
+- [Laravel](https://laravel.com/) - The PHP Framework For Web Artisans
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+- [Alpine JS](https://alpinejs.dev/) - A rugged, minimal framework for composing JavaScript behavior in your markup.
+
+
 ## Team
 
 - Farah Danisha Salam (UI/UX Designer & Frontend Developer)
