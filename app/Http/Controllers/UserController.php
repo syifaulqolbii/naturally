@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Event;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -64,6 +66,17 @@ class UserController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+//    show dashboard admin
+    public function index()
+    {
+
+        return view('users.dashboardAdmin', [
+            'users' => User::all(),
+            'blogs' => Blog::all(),
+            'events' => Event::all(),
+        ]);
     }
 }
 

@@ -2,7 +2,7 @@
 
 <a
     href="/event/{{$event->id}}"
-    class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+    class="w-1/3 md:h-[375px] rounded-lg overflow-hidden shadow-lg"
 >
     <div class="w-full md:h-[222px]">
         <img src="{{$event->image ? asset('storage/'.$event->image) : asset('images/event.png')}}" alt="" class="w-full h-[222px]"/>

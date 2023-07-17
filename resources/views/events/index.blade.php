@@ -61,7 +61,7 @@
                         </h1>
                     </div>
                     <div
-                        class="flex justify-start md:mt-10 flex-wrap mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full">
+                        class="md:mt-9 mt-4 md:gap-12 justify-between flex flex-col md:flex-row md:px-4 px-2">
                         @unless(count($events) == 0)
                             @foreach($events as $event)
                                 <x-event-card :event="$event"/>

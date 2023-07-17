@@ -2,7 +2,7 @@
 
 <a
     href="/blog/{{$blog->id}}"
-    class="md:w-[370px] w-full md:h-[375px] rounded-lg overflow-hidden shadow-lg"
+    class="md:w-1/3 md:h-[375px] rounded-lg overflow-hidden shadow-lg"
 >
     <div class="w-full md:h-[222px]">
         <img src="{{$blog->image ? asset('storage/'.$blog->image) : asset('images/kambing.png')}}" alt=""/>
