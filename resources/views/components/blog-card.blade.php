@@ -8,10 +8,10 @@
         <img src="{{$blog->image ? asset('storage/'.$blog->image) : asset('images/kambing.png')}}" alt=""/>
     </div>
     <div
-        class="px-6 md:flex md:flex-col md:justify-between py-5 font-work font-normal"
+        class="px-6 md:flex md:flex-col md:justify-between font-work font-normal"
     >
         <p
-            class="text-xl md:-mt-6 text-hitam-300 leading-[30px]"
+            class="text-xl mt-6 text-hitam-300 leading-[30px]"
         >
             {{$blog->title}}
         </p>

@@ -51,8 +51,8 @@
                 </form>
             </section>
             <!-- activity section -->
-            <section class="bg-[#fafafa] pt-16 flex flex-col items-center">
-                <div class="px-4">
+            <section class="bg-[#fafafa] pt-16 flex flex-col">
+                <div class="px-4 mb-24">
                     <div class="flex items-center">
                         <h1
                             class="font-playfair text-left text-hijau-300 md:text-[28px] text-2xl font-medium"
@@ -61,7 +61,7 @@
                         </h1>
                     </div>
                     <div
-                        class="flex md:mt-10 flex-wrap justify-center mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full">
+                        class="flex justify-start md:mt-10 flex-wrap mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full">
                         @unless(count($events) == 0)
                             @foreach($events as $event)
                                 <x-event-card :event="$event"/>
@@ -70,13 +70,6 @@
                             <p class="text-center">No events found</p>
                         @endunless
                     </div>
-                </div>
-                <div class="sm:py-16 py-8">
-                    <button
-                        class="border rounded-lg border-hijau-100 text-hijau-100 font-work text-xl py-1 px-4 sm:text-2xl sm:py-3 sm:px-8 hover:bg-hijau-100 hover:text-white"
-                    >
-                        Find more
-                    </button>
                 </div>
             </section>
         </div>

@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div
-                class="flex md:mt-10 flex-wrap justify-center mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
+                class="flex md:mt-10 flex-wrap mt-7 md:gap-12 md:flex-row flex-col gap-4 mx-auto w-full"
             >
                 @unless(count($events) == 0)
                     @foreach($events as $event)
