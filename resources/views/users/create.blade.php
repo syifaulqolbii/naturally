@@ -1,13 +1,4 @@
 <x-layout>
-    <header class="pt-8">
-        <div class="md:container">
-            <nav class="flex items-center justify-between">
-                <a href="#">
-                    <img class="w-40" src="{{asset('images/logo.png')}}" alt="logo" />
-                </a>
-            </nav>
-        </div>
-    </header>
     <div class="pt-14">
         <div class="flex flex-col items-center justify-center gap-4">
             <img src="{{asset('images/logo-daun.png')}}" alt="" class="w-16" />

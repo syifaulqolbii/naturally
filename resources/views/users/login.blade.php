@@ -1,19 +1,7 @@
 <x-layout>
-    <header class="pt-8">
-        <div class="md:container">
-            <nav class="flex items-center justify-between">
-                <a href="#">
-                    <img class="w-40" src="images/logo.png" alt="logo" />
-                </a>
-                <a href="#" class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl">
-                    Register
-                </a>
-            </nav>
-        </div>
-    </header>
     <div class="pt-14">
         <div class="flex flex-col items-center justify-center gap-4">
-            <img src="images/logo-daun.png" alt="" class="w-16" />
+            <img src="{{asset('images/logo-daun.png')}}" alt="" class="w-16" />
             <h1 class="font-playfair text-[32px]">Welcome to Naturally</h1>
             <p class="font-work text-[16px]">
                 Login to Naturally to get unforgetable experience!

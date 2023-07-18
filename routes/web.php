@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
@@ -30,7 +31,9 @@ Route::get('/moreArticle', [BlogController::class, 'index']);
 // Admin routes
 Route::middleware(['auth', 'user-role:admin'])->group(function () {
     // show admin dashboard
-    Route::get('/dashboard', [UserController::class, 'index']);
+    Route::get('/dashboard', [AdminController::class, 'index']);
+    //    show dashboard activity
+    Route::get('/dashboard/activity', [AdminController::class, 'activity']);
     // show create form
     Route::get('/event/create', [EventController::class, 'create']);
     // store event

@@ -30,10 +30,10 @@
         </form>
     @else
         <a
-            href="/registerForm"
+            href="/loginForm"
             class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
         >
-            Register
+            Login
         </a>
     @endauth
 </nav>

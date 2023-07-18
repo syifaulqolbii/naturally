@@ -67,16 +67,5 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
-
-//    show dashboard admin
-    public function index()
-    {
-
-        return view('users.dashboardAdmin', [
-            'users' => User::all(),
-            'blogs' => Blog::all(),
-            'events' => Event::all(),
-        ]);
-    }
 }
 

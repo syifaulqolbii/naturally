@@ -26,10 +26,17 @@ class BlogController extends Controller
     // show blog detail
     public function show(Blog $blog)
     {
+        // Mengupdate jumlah pembaca (readers) blog
+        $blog->readers++; // Menambah jumlah pembaca
+
+        // Simpan perubahan ke dalam database
+        $blog->save();
+
         return view('blogs.show', [
             'blog' => $blog
         ]);
     }
+
 
     //store blogid
     public function store(Request $request)
