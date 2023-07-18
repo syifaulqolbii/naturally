@@ -117,7 +117,7 @@
                 <p class="font-work text-xl">Article</p>
             </a>
         </div>
-        <form action="/logout" method="post" class="flex gap-4 items-center border-t mt-56 pt-8 w-64 text-[#D8D8D8] hover:text-white hover:stroke-white focus:text-white stroke-[#D8D8D8] focus:stroke-white focus:font-medium">
+        <form action="/logout" method="post" class="flex mb-5 gap-4 items-center border-t mt-56 pt-8 w-64 text-[#D8D8D8] hover:text-white hover:stroke-white focus:text-white stroke-[#D8D8D8] focus:stroke-white focus:font-medium">
             @csrf
             @method('POST')
             <svg
