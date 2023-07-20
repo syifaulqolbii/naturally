@@ -34,6 +34,8 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index']);
     //    show dashboard activity
     Route::get('/dashboard/activity', [AdminController::class, 'activity']);
+    //    show dashboard article
+    Route::get('/dashboard/article', [AdminController::class, 'article']);
     // show create form
     Route::get('/event/create', [EventController::class, 'create']);
     // store event

@@ -46,4 +46,13 @@ class AdminController extends Controller
             'events' => $events,
         ]);
     }
+
+    //    show dashboard article
+    public function article()
+    {
+        $blogs = Blog::latest()->filter(request(['search']))->simplePaginate(6);
+        return view('admin.article', [
+            'blogs' => $blogs,
+        ]);
+    }
 }
