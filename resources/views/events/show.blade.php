@@ -120,18 +120,15 @@
                             menyenangkan!
                         </p>
                         <div class="flex items-center mb-32 justify-end pt-8 gap-6">
-{{--                            <a--}}
-{{--                                href="#"--}}
-{{--                                class="px-10 text-hijau-100 py-4 font-work font-medium text-base border-2 border-hijau-100 rounded-xl"--}}
-{{--                            >--}}
-{{--                                Contact--}}
-{{--                            </a>--}}
-                            <a
-                                href="#"
-                                class="px-10 bg-hijau-100 text-white py-4 font-work font-medium text-base rounded-xl hover:bg-[#838E73] hover:text-white"
-                            >
-                                Join
-                            </a>
+                            <form action="{{route('joinEvent', ['event'=>$event->id]) }}" method="post">
+                                @csrf
+                                <button
+                                    type="submit"
+                                    class="px-10 bg-hijau-100 text-white py-4 font-work font-medium text-base rounded-xl hover:bg-[#838E73] hover:text-white"
+                                >
+                                    Join
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
