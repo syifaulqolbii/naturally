@@ -55,7 +55,7 @@
             @layer utilities {
             }
         </style>
-        <title>Create Activity</title>
+        <title>Create Article</title>
     </head>
     <body>
         <div class="flex">
@@ -219,7 +219,7 @@
             <!-- content -->
             <div class="w-3/4 p-12 bg-white">
                 <div class="mb-6">
-                    <h1 class="font-playfair text-3xl text-[#7B370C]">
+                    <h1 class="font-playfair text-3xl text-[#FFAA04]">
                         New Activity
                     </h1>
                     <p class="font-work text-base text-hitam-200 pt-2">
@@ -235,9 +235,9 @@
                             viewBox="0 0 14 14"
                             fill="none"
                         >
-                            <circle cx="7" cy="7" r="7" fill="#7B370C" />
+                            <circle cx="7" cy="7" r="7" fill="#FFAA04" />
                             <circle cx="7" cy="7" r="5" fill="white" />
-                            <circle cx="7" cy="7" r="2" fill="#7B370C" />
+                            <circle cx="7" cy="7" r="2" fill="#FFAA04" />
                         </svg>
                         <h2 class="font-work text-xl text-[#1E1E1E]">Photo</h2>
                     </div>
@@ -307,9 +307,9 @@
                             viewBox="0 0 14 14"
                             fill="none"
                         >
-                            <circle cx="7" cy="7" r="7" fill="#7B370C" />
+                            <circle cx="7" cy="7" r="7" fill="#FFAA04" />
                             <circle cx="7" cy="7" r="5" fill="white" />
-                            <circle cx="7" cy="7" r="2" fill="#7B370C" />
+                            <circle cx="7" cy="7" r="2" fill="#FFAA04" />
                         </svg>
                         <h2 class="font-work text-xl text-[#1E1E1E]">
                             Details
@@ -331,23 +331,27 @@
                                 <p
                                     class="font-work text-base text-hitam-200 mb-3"
                                 >
-                                    Date
+                                    Type Article
                                 </p>
-                                <input
-                                    type="date"
-                                    class="border border-[#EDEDED] focus:border-[#3C4D27] rounded-md outline-0 font-work px-6 py-3 h-10 text-sm"
-                                />
+                                <select
+                                    name="article"
+                                    id="article"
+                                    class="border border-[#EDEDED] focus:border-[#3C4D27] rounded-md font-work outline-0 h-10 text-sm"
+                                >
+                                    <option value="">Animal</option>
+                                    <option value="">Trash</option>
+                                </select>
                             </div>
                             <div>
                                 <p
                                     class="font-work text-base text-hitam-200 mb-3"
                                 >
-                                    Person needed
+                                    Name
                                 </p>
                                 <input
                                     type="text"
                                     class="border border-[#EDEDED] focus:border-[#3C4D27] rounded-md font-work placeholder-[#9A9A9A] outline-0 px-6 py-3 h-10 text-sm"
-                                    placeholder="Min. 10 persons"
+                                    placeholder="Author’s name"
                                 />
                             </div>
                         </div>
