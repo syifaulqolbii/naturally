@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Work+Sans:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    container: {
+                        center: true,
+                        padding: "85px",
+                    },
+                    extend: {
+                        colors: {
+                            hijau: {
+                                100: "#7A9C46",
+                                200: "#3C4D27",
+                                300: "#1A2310",
+                            },
+                            kuning: "#FFAA04",
+                            emas: "#A98032",
+                            hitam: {
+                                100: "#A9A9A9",
+                                200: "#424242",
+                                300: "#121212",
+                            },
+                        },
+                        fontFamily: {
+                            playfair: ["Playfair Display", "serif"],
+                            work: ["Work Sans", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+            }
+        </style>
+        <title>Register</title>
+    </head>
+    <body class="md:p-4 p-2">
+        <header class="pt-8">
+            <div class="md:container">
+                <nav class="flex items-center justify-between">
+                    <a href="#">
+                        <img class="w-40" src="images/logo.png" alt="logo" />
+                    </a>
+                    <a
+                        href="#"
+                        class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl"
+                    >
+                        Login
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <div class="pt-14">
+            <div class="flex flex-col items-center justify-center gap-4">
+                <img src="images/logo-daun.png" alt="" class="w-16" />
+                <h1 class="font-playfair text-[32px]">Register to Naturally</h1>
+                <p class="font-work text-[16px]">Create account to join us!</p>
+            </div>
+        </div>
+        <!-- login section -->
+        <section class="p-14">
+            <div class="flex flex-col items-center font-work text-xl">
+                <div class="flex flex-col w-[40%] gap-4">
+                    <p>Name</p>
+                    <input
+                        type="text"
+                        class="rounded-xl h-16 bg-[#f1f1f1] focus:outline-0 focus:ring-1 focus:ring-hijau-200 px-4"
+                    />
+                </div>
+                <div class="flex flex-col w-[40%] gap-4 pt-6">
+                    <p>Email</p>
+                    <input
+                        type="text"
+                        class="rounded-xl h-16 bg-[#f1f1f1] focus:outline-0 focus:ring-1 focus:ring-hijau-200 px-4"
+                    />
+                </div>
+                <div class="flex flex-col w-[40%] gap-4 pt-6">
+                    <p>Password</p>
+                    <input
+                        type="text"
+                        class="rounded-xl h-16 bg-[#f1f1f1] focus:outline-0 focus:ring-1 focus:ring-hijau-200 px-4"
+                    />
+                </div>
+                <button class="bg-hijau-200 p-5 w-[40%] rounded-xl mt-12">
+                    <a href="#" class="text-[#ffffff]">Register</a>
+                </button>
+                <div class="flex pt-16 text-base">
+                    <p class="text-[#717171]">Already have an account?</p>
+                    &nbsp;
+                    <a href="#" class="text-hijau-100">Log in!</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

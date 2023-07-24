@@ -9,9 +9,28 @@ module.exports = {
     ],
 
     theme: {
+        container: {
+            center: true,
+            padding: "85px",
+        },
         extend: {
+            colors: {
+                hijau: {
+                    100: "#7A9C46",
+                    200: "#3C4D27",
+                    300: "#1A2310",
+                },
+                kuning: "#FFAA04",
+                emas: "#A98032",
+                hitam: {
+                    100: "#A9A9A9",
+                    200: "#424242",
+                    300: "#121212",
+                },
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                playfair: ["Playfair Display", "serif"],
+                work: ["Work Sans", "sans-serif"],
             },
         },
     },

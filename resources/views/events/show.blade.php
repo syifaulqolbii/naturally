@@ -1,0 +1,144 @@
+<x-layout>
+    <div class="pt-12 min-h-full bg-[#fafafa]">
+        <div class="md:container">
+            @include('partials._navbar')
+            <!-- Bawah header -->
+            <section class="pt-20">
+                <div class="flex flex-col items-center">
+                    <div class="w-full">
+                        <div class="w-full rounded-2xl h-[230px] bg-cover bg-center" style="background-image: url('{{ $event->image ? asset('storage/'.$event->image) : asset('images/event.png') }}')"></div>
+                        <div class="flex items-center pt-8 gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                            >
+                                <path
+                                    d="M6.66675 1.66666V4.16666"
+                                    stroke="#E27F00"
+                                    stroke-width="1.2"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M13.3333 1.66666V4.16666"
+                                    stroke="#E27F00"
+                                    stroke-width="1.2"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M13.3333 2.91666C16.1083 3.06666 17.5 4.12499 17.5 8.04166V13.1917C17.5 16.625 16.6667 18.3417 12.5 18.3417H7.5C3.33333 18.3417 2.5 16.625 2.5 13.1917V8.04166C2.5 4.12499 3.89167 3.07499 6.66667 2.91666H13.3333Z"
+                                    stroke="#E27F00"
+                                    stroke-width="1.2"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.2916 14.6667H2.70825"
+                                    stroke="#E27F00"
+                                    stroke-width="1.2"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M10.0001 6.875C8.97508 6.875 8.10841 7.43333 8.10841 8.51667C8.10841 9.03333 8.35008 9.425 8.71675 9.675C8.20841 9.975 7.91675 10.4583 7.91675 11.025C7.91675 12.0583 8.70841 12.7 10.0001 12.7C11.2834 12.7 12.0834 12.0583 12.0834 11.025C12.0834 10.4583 11.7917 9.96667 11.2751 9.675C11.6501 9.41667 11.8834 9.03333 11.8834 8.51667C11.8834 7.43333 11.0251 6.875 10.0001 6.875ZM10.0001 9.24167C9.56675 9.24167 9.25008 8.98333 9.25008 8.575C9.25008 8.15833 9.56675 7.91667 10.0001 7.91667C10.4334 7.91667 10.7501 8.15833 10.7501 8.575C10.7501 8.98333 10.4334 9.24167 10.0001 9.24167ZM10.0001 11.6667C9.45008 11.6667 9.05008 11.3917 9.05008 10.8917C9.05008 10.3917 9.45008 10.125 10.0001 10.125C10.5501 10.125 10.9501 10.4 10.9501 10.8917C10.9501 11.3917 10.5501 11.6667 10.0001 11.6667Z"
+                                    fill="#E27F00"
+                                />
+                            </svg>
+                            <p class="text-[#E27F00] text-xl pr-10">
+                                {{ \Carbon\Carbon::parse($dateFromDatabase)->format('d M Y')  }}
+                            </p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                            >
+                                <path
+                                    d="M14.9999 5.96666C14.9499 5.95833 14.8916 5.95833 14.8416 5.96666C13.6916 5.92499 12.7749 4.98332 12.7749 3.81666C12.7749 2.62499 13.7332 1.66666 14.9249 1.66666C16.1166 1.66666 17.0749 2.63332 17.0749 3.81666C17.0666 4.98332 16.1499 5.92499 14.9999 5.96666Z"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M14.1415 12.0333C15.2831 12.225 16.5415 12.025 17.4248 11.4333C18.5998 10.65 18.5998 9.36667 17.4248 8.58334C16.5331 7.99167 15.2581 7.79166 14.1165 7.99166"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M4.9749 5.96666C5.0249 5.95833 5.08324 5.95833 5.13324 5.96666C6.28324 5.92499 7.1999 4.98332 7.1999 3.81666C7.1999 2.62499 6.24157 1.66666 5.0499 1.66666C3.85824 1.66666 2.8999 2.63332 2.8999 3.81666C2.90824 4.98332 3.8249 5.92499 4.9749 5.96666Z"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M5.83328 12.0333C4.69162 12.225 3.43328 12.025 2.54995 11.4333C1.37495 10.65 1.37495 9.36667 2.54995 8.58334C3.44162 7.99167 4.71662 7.79166 5.85828 7.99166"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M10.0001 12.1917C9.95015 12.1833 9.89181 12.1833 9.84181 12.1917C8.69181 12.15 7.77515 11.2083 7.77515 10.0417C7.77515 8.85 8.73348 7.89166 9.92514 7.89166C11.1168 7.89166 12.0751 8.85833 12.0751 10.0417C12.0668 11.2083 11.1501 12.1583 10.0001 12.1917Z"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M7.5751 14.8167C6.4001 15.6 6.4001 16.8833 7.5751 17.6667C8.90843 18.5583 11.0918 18.5583 12.4251 17.6667C13.6001 16.8833 13.6001 15.6 12.4251 14.8167C11.1001 13.9333 8.90843 13.9333 7.5751 14.8167Z"
+                                    stroke="#424242"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p class="text-hitam-200 text-xl">{{$event->quota}} Orang</p>
+                        </div>
+                        <h1 class="font-work text-hitam-300 text-3xl pt-5">
+                            {{ $event->name}}
+                        </h1>
+                        <h2
+                            class="font-work text-hitam-200 text-base text-justify pt-5"
+                        >
+                            {{ $event->description }}
+                        </h2>
+                        <p class="text-[#E27F00] text-base pt-1">
+                            Daftar sekarang dan dapatkan pengalaman
+                            menyenangkan!
+                        </p>
+                        <div class="flex items-center mb-32 justify-end pt-8 gap-6">
+                            <form action="{{route('joinEvent', ['event'=>$event->id]) }}" method="post">
+                                @csrf
+                                <button
+                                    type="submit"
+                                    class="px-10 bg-hijau-100 text-white py-4 font-work font-medium text-base rounded-xl hover:bg-[#838E73] hover:text-white"
+                                >
+                                    Join
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+{{--    <form method="post" action="/event/{{$event->id}}">--}}
+{{--        @csrf--}}
+{{--        @method('DELETE')--}}
+{{--        <button>Delete</button>--}}
+{{--    </form>--}}
+</x-layout>
