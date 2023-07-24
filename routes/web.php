@@ -36,6 +36,8 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::get('/dashboard/activity', [AdminController::class, 'activity']);
     //    show dashboard article
     Route::get('/dashboard/article', [AdminController::class, 'article']);
+    //    shoe dashboard user
+    Route::get('/dashboard/user', [AdminController::class, 'user']);
     // show create form
     Route::get('/event/create', [EventController::class, 'create']);
     // store event
@@ -60,10 +62,15 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::delete('/blog/{blog}', [BlogController::class, 'destroy']);
 });
 
+
+
 // show blog detail
 Route::get('/blog/{blog}', [BlogController::class, 'show']);
 // show event detail
 Route::get('/event/{event}', [EventController::class, 'show']);
+
+//Join event
+Route::post('/joinEvent/{event}', [EventController::class, 'joinEvent'])->middleware('auth')->name('joinEvent');
 
 // show register form
 Route::get('/registerForm', [UserController::class, 'create'])->middleware('guest');

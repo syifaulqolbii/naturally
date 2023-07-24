@@ -55,4 +55,17 @@ class AdminController extends Controller
             'blogs' => $blogs,
         ]);
     }
+
+    public function user()
+    {
+        $users = User::where('role', 'user') // Hanya ambil data user dengan role "user"
+        ->withCount('transaksis') // Menghitung jumlah event yang diikuti oleh setiap user
+        ->latest()
+            ->filter(request(['search']))
+            ->simplePaginate(6);
+
+        return view('admin.user', [
+            'users' => $users,
+        ]);
+    }
 }

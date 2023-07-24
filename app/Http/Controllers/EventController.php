@@ -3,15 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
     // show activity page
     public function index()
     {
+        $events = Event::where('quota', '>', 0)
+        ->latest()
+            ->filter(request(['search']))
+            ->simplePaginate(3);
+
         return view('events.index', [
-            'events' => Event::latest()->filter(request(['search']))->simplePaginate(3)
+            'events' => $events,
         ]);
     }
 
@@ -79,5 +86,25 @@ class EventController extends Controller
     {
         $event->delete();
         return redirect('/')->with('message', 'Event has been deleted');
+    }
+
+    // join event
+    public function joinEvent(Request $request, $event)
+    {
+        // get user id
+        $user = Auth::user()->id;
+
+        // insert data to transaction table
+        Transaksi::create([
+            'user_id' => $user,
+            'event_id' => $event,
+        ]);
+
+        //update quota
+        $event = Event::find($event);
+        $event->quota = $event->quota - 1;
+        $event->save();
+
+        return redirect('/')->with('message', 'You have joined the event');
     }
 }

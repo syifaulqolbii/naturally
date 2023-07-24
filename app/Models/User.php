@@ -24,6 +24,18 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function scopeFilter($query, array $filters)
+    {
+        if ($filters['search'] ?? false) {
+            $query->where('name', 'like', '%' . request('search') . '%')
+                ->orWhere('email', 'like', '%' . request('search') . '%');
+        }
+    }
+
+    public function transaksis(){
+        return $this->hasMany(Transaksi::class, 'user_id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
