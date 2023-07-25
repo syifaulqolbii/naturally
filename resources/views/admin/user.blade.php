@@ -40,7 +40,7 @@
                         </svg>
                         <input
                             name="search"
-                            class="search-form font-work text-sm placeholder-[#D8D8D8] w-full h-full border-0"
+                            class="search-form font-work text-sm placeholder-[#D8D8D8] w-full h-full border-0 focus:outline-none"
                             type="text"
                             placeholder="Search user by name or email"
                         />
@@ -117,7 +117,7 @@
                             <p>{{$user->email}}</p>
                         </div>
                         <div class="w-1/4">
-                            <p>{{$user->created_at}}</p>
+                            <p>{{$user->created_at->format('d M Y')}}</p>
                         </div>
                         <div class="w-1/4">
                             <p>{{  $user->transaksis()->count()  }}</p>
@@ -126,22 +126,10 @@
                 </div>
             @endforeach
 
-            <div class="flex pt-4">
-                <!-- Previous Button -->
-                <a
-                    href="#"
-                    class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-                >
-                    Previous
-                </a>
-
-                <!-- Next Button -->
-                <a
-                    href="#"
-                    class="flex items-center justify-center px-3 h-8 ml-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-                >
-                    Next
-                </a>
+            <div class="mt-12">
+                <div class="flex justify-center">
+                    {{ $users->links() }}
+                </div>
             </div>
         </div>
     </div>
