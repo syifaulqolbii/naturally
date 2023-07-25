@@ -10,6 +10,7 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'location', 'date', 'description', 'quota', 'image'];
+    protected $casts = ['date'=>'datetime'];
 
     public function scopeFilter($query, array $filters)
     {
@@ -18,5 +19,9 @@ class Event extends Model
                 ->orWhere('location', 'like', '%' . request('search') . '%')
                 ->orWhere('date', 'like', '%' . request('search') . '%');
         }
+    }
+
+    public function transaksis(){
+        return $this->hasMany(Transaksi::class, 'event_id');
     }
 }

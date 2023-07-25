@@ -8,7 +8,6 @@
         <a href="/" class="hover:font-medium">Home</a>
         <a href="/moreEvents" class="hover:font-medium">Activity</a>
         <a href="/moreArticle" class="hover:font-medium">Article</a>
-        <a href="#" class="hover:font-medium">About</a>
     </div>
     @auth()
         @if(auth()->user()->role === 'user')
@@ -20,14 +19,6 @@
                 Dashboard
             </a>
         @endif
-
-        <form action="/logout" method="post">
-            @csrf
-            @method('POST')
-            <button type="submit" class="bg-hijau-200 px-8 py-4 font-work font-medium text-white rounded-xl">
-                Logout
-            </button>
-        </form>
     @else
         <a
             href="/loginForm"

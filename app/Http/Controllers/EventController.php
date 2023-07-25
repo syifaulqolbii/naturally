@@ -13,7 +13,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::where('quota', '>', 0)
-        ->latest()
+            ->latest()
             ->filter(request(['search']))
             ->simplePaginate(3);
 
@@ -53,7 +53,7 @@ class EventController extends Controller
         }
 
         Event::create($formField);
-        return redirect('/')->with('message', 'New event has been created');
+        return redirect('/dashboard/activity')->with('message', 'New event has been created');
     }
 
     // show edit form
@@ -85,7 +85,7 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         $event->delete();
-        return redirect('/')->with('message', 'Event has been deleted');
+        return redirect('/dashboard/activity')->with('message', 'Event has been deleted');
     }
 
     // join event

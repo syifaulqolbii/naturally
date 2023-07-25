@@ -44,6 +44,7 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('/')->with('message', 'User logout successfully.');
     }
+
 //    login form
     public function loginForm()
     {
@@ -66,6 +67,26 @@ class UserController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    // dashboard profile
+    public function profile()
+    {
+        $user = auth()->user();
+        return view('users.userProfileDescription', compact('user'));
+    }
+
+    // user followed event
+    public function followedEvent()
+    {
+        $user = auth()->user();
+        $events = $user->transaksis()->with('event')->get();
+        return view('users.userFollowedEvent', compact('events', 'user'));
+    }
+
+    public function article(){
+        $user = auth()->user();
+        return view('users.userArticle', compact('user'));
     }
 }
 
