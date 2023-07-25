@@ -53,7 +53,7 @@ class EventController extends Controller
         }
 
         Event::create($formField);
-        return redirect('/')->with('message', 'New event has been created');
+        return redirect('/dashboard/activity')->with('message', 'New event has been created');
     }
 
     // show edit form

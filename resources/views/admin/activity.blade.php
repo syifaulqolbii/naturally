@@ -96,7 +96,7 @@
                             {{ $events->links() }}
                         </div>
                     </div>
-                    <a href="" class="bg-hijau-100 px-4 py-2 rounded-md flex items-center gap-2 hover:font-medium">
+                    <a href="/event/create" class="bg-hijau-100 px-4 py-2 rounded-md flex items-center gap-2 hover:font-medium">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                              fill="none">
                             <path d="M5 10H15" stroke="white" stroke-width="1.5" stroke-linecap="round"
