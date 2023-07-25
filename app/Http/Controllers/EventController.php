@@ -78,7 +78,7 @@ class EventController extends Controller
         }
 
         $event->update($formField);
-        return back()->with('message', 'Event has been updated');
+        return redirect('/dashboard/activity')->with('message', 'Event has been updated');
     }
 
     // delete event
