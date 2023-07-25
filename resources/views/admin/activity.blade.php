@@ -62,7 +62,7 @@
                                                           stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </div>
-                                            <a href="#" class="flex gap-2 justify-center items-center py-2 w-1/2">
+                                            <a href="/event/{{$event->id}}/edit" class="flex gap-2 justify-center items-center py-2 w-1/2">
                                                 <p class="text-[#7A9C46] text-base">Edit</p>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
                                                      viewBox="0 0 12 12"

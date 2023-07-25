@@ -53,7 +53,7 @@ class BlogController extends Controller
 
         Blog::create($formFields);
 
-        return redirect('/')->with('message', 'Your blog has been added!');
+        return redirect('/dashboard/article')->with('message', 'Your blog has been added!');
     }
 
     // show edit form
@@ -78,13 +78,13 @@ class BlogController extends Controller
 
         $blog->update($formFields);
 
-        return redirect('/')->with('message', 'Your blog has been updated!');
+        return redirect('/dashboard/article')->with('message', 'Your blog has been updated!');
     }
 
     // delete blog
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        return redirect('/')->with('message', 'Your blog has been deleted!');
+        return redirect('/dashboard/article')->with('message', 'Your blog has been deleted!');
     }
 }
