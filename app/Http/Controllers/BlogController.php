@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function index()
     {
         return view('blogs.index', [
-            'blogs' => Blog::latest()->filter(request(['search', 'tag']))->simplePaginate(6),
+            'blogs' => Blog::latest()->filter(request(['search', 'tag']))->simplePaginate(3),
             'tags' => Tag::all()
         ]);
     }

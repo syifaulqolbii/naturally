@@ -40,7 +40,7 @@
                         </svg>
                         <input
                             name="search"
-                            class="search-form font-work text-sm placeholder-[#D8D8D8] w-full h-full border-0"
+                            class="search-form font-work text-sm placeholder-[#D8D8D8] w-full h-full border-0 focus:outline-none"
                             type="text"
                             placeholder="Search activity by title"
                         />
@@ -58,7 +58,7 @@
                                         src="{{$event->image ? asset('storage/'.$event->image) : asset('images/event.png')}}"
                                         alt="" class="w-full h-[130px] inset-0 object-cover rounded-t-md"/>
                                     <div class="flex px-5 justify-between items-center pt-3 font-work text-sm">
-                                        <p class="text-[#E27F00]">{{ $event->formattedDate }}</p>
+                                        <p class="text-[#E27F00]">{{ $event->date->format('d M Y') }}</p>
                                         <p class="text-hitam-100">{{ $event->quota }} <span>Persons</span></p>
                                     </div>
                                     <h1 class="text-hitam-300 text-base font-work px-5 py-4">
@@ -103,22 +103,10 @@
             <div
                 class="flex mt-9 justify-between font-work items-center w-full"
             >
-                <div class="flex">
-                    <!-- Previous Button -->
-                    <a
-                        href="#"
-                        class="flex items-center justify-center px-4 py-2 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-                    >
-                        Previous
-                    </a>
-
-                    <!-- Next Button -->
-                    <a
-                        href="#"
-                        class="flex items-center justify-center px-4 py-2 h-8 ml-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-                    >
-                        Next
-                    </a>
+                <div class="mt-12">
+                    <div class="flex justify-center">
+                        {{ $events->links() }}
+                    </div>
                 </div>
                 <a
                     href=""

@@ -35,8 +35,14 @@
                 @endunless
             </div>
 
+            <div class="mt-12">
+                <div class="flex justify-center">
+                    {{ $blogs->links() }}
+                </div>
+            </div>
+
         </div>
-        <section class="pt-16 mt-44 bg-[#f8f8f8] h-96 w-full">
+        <section class="pt-16 mt-32 bg-[#f8f8f8] h-96 w-full">
             <div class="flex flex-col items-center justify-center">
                 <h1 class="font-work text-3xl text-[#333333] font-semibold">
                     Still can’t find your preferences?

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Event;
 use App\Models\User;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -18,11 +17,7 @@ class AdminController extends Controller
         $totalActivity = Event::count();
         $events = Event::whereDate('date', '>=', now())
             ->limit(3)
-            ->get()
-            ->map(function ($event) {
-                $event->formattedDate = Carbon::parse($event->date)->format('d M Y');
-                return $event;
-            });
+            ->get();
 
 
         return view('admin.dashboardAdmin', [
@@ -38,10 +33,7 @@ class AdminController extends Controller
     //    show dashboard activity
     public function activity()
     {
-        $events = Event::latest()->filter(request(['search']))->simplePaginate(6)->map(function ($event) {
-            $event->formattedDate = Carbon::parse($event->date)->format('d M Y');
-            return $event;
-        });
+        $events = Event::latest()->filter(request(['search']))->simplePaginate(6);
         return view('admin.activity', [
             'events' => $events,
         ]);

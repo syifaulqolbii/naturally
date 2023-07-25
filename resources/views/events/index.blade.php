@@ -72,6 +72,11 @@
                     </div>
                 </div>
             </section>
+            <div class="mb-12">
+                <div class="flex justify-center">
+                    {{ $events->links() }}
+                </div>
+            </div>
         </div>
         @include('partials._footer')
     </div>

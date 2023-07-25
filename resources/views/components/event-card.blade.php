@@ -9,7 +9,7 @@
     </div>
     <div class="px-6 py-5 font-work font-normal">
         <div class="flex justify-between text-base">
-            <p class="text-[#E27F00]">{{$event->date}}</p>
+            <p class="text-[#E27F00]">{{$event->date->format('d M Y')}}</p>
             <p class="text-hitam-100">{{$event->quota}} Persons</p>
         </div>
         <p
