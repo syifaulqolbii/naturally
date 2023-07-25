@@ -19,4 +19,8 @@ class Event extends Model
                 ->orWhere('date', 'like', '%' . request('search') . '%');
         }
     }
+
+    public function transaksis(){
+        return $this->hasMany(Transaksi::class, 'event_id');
+    }
 }

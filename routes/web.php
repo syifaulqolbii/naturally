@@ -63,6 +63,13 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
 });
 
 
+// Dashboard Profile
+Route::get('/profile/{user_id}', [UserController::class, 'profile'])->middleware('auth');
+// User followed event
+Route::get('/profile/{user_id}/followedEvent', [UserController::class, 'followedEvent'])->middleware('auth');
+// show article profile
+Route::get('/profile/{user_id}/article', [UserController::class, 'article'])->middleware('auth');
+
 
 // show blog detail
 Route::get('/blog/{blog}', [BlogController::class, 'show']);
