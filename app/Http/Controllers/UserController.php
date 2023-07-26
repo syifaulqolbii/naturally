@@ -105,8 +105,8 @@ class UserController extends Controller
             'description' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('images', 'public');
+        if ($request->hasFile('avatar')) {
+            $formFields['avatar'] = $request->file('avatar')->store('images', 'public');
         }
 
         $user = auth()->user();
