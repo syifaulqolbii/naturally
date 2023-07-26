@@ -81,7 +81,7 @@
                             <p class="font-work text-base text-hitam-200 mb-3">
                                 Description
                             </p>
-                            <textarea id="summernote" name="article" value="{{$blog->article}}" class=""></textarea>
+                            <textarea id="summernote" name="article">{{$blog->article}}</textarea>
                             @error('article')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
