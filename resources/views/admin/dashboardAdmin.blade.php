@@ -76,7 +76,7 @@
                                     {{ $event->name }}
                                 </h2>
                             </div>
-                            <a href="#" class="stroke-[#3C4D27] hover:stroke-[#FFAA04]">
+                            <a href="/event/{{$event->id}}" class="stroke-[#3C4D27] hover:stroke-[#FFAA04]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M7.42505 16.5999L12.8584 11.1666C13.5 10.5249 13.5 9.4749 12.8584 8.83324L7.42505 3.3999" stroke="" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
@@ -109,7 +109,7 @@
                                     {{ $blog->title }}
                                 </h2>
                             </div>
-                            <a href="#" class="stroke-[#3C4D27] hover:stroke-[#FFAA04]">
+                            <a href="/blog/{{$blog->id}}" class="stroke-[#3C4D27] hover:stroke-[#FFAA04]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M7.42505 16.5999L12.8584 11.1666C13.5 10.5249 13.5 9.4749 12.8584 8.83324L7.42505 3.3999" stroke="" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
