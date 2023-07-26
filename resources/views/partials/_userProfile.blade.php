@@ -40,7 +40,7 @@
 
         </div>
         <div class="ml-[808px] pt-20">
-            <a href="" class="py-[10px] px-4 border border-[#CECECE] rounded-lg font-medium hover:text-white hover:bg-hitam-300">Edit Profile</a>
+            <a href="/profile/{{auth()->user()->id}}/edit" class="py-[10px] px-4 border border-[#CECECE] rounded-lg font-medium hover:text-white hover:bg-hitam-300">Edit Profile</a>
         </div>
     </div>
 </header>
