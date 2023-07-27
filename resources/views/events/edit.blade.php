@@ -39,7 +39,7 @@
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
                             <p class="font-work text-xs text-[#9A9A9A]">
-                                min. 1240 x 1240
+                                max. 1240 x 1240 pixel, size 2MB
                             </p>
                         </div>
                     </div>

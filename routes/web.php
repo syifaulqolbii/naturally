@@ -69,6 +69,10 @@ Route::get('/profile/{user_id}', [UserController::class, 'profile'])->middleware
 Route::get('/profile/{user_id}/followedEvent', [UserController::class, 'followedEvent'])->middleware('auth');
 // show article profile
 Route::get('/profile/{user_id}/article', [UserController::class, 'article'])->middleware('auth');
+// show edit profile
+Route::get('/profile/{user_id}/edit', [UserController::class, 'edit'])->middleware('auth');
+// update profile
+Route::put('/profile/{user_id}', [UserController::class, 'update'])->middleware('auth');
 
 
 // show blog detail

@@ -1,6 +1,6 @@
 <x-layout>
     <header class="bg-[#F8F8F8] pt-8 h-[240px]">
-        <div class="md:container">
+        <div class="container">
             <nav class="flex items-center justify-between">
                 <a href="/">
                     <img class="w-40" src="{{asset('images/logo.png')}}" alt="logo"/>
@@ -19,40 +19,83 @@
                 </form>
             </nav>
         </div>
-        <div class="flex pt-[100px] pl-[84px]">
-            <form action="" method="post" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
 
-                <img src="{{$user->image ? asset('storage/'.$user->image) : asset('images/ava.png')}}" alt=""/>
-                <div class="flex flex-col pt-11 pl-5">
-                    <p class="font-playfair text-hitam-300 font-medium text-4xl pb-1">{{$user->name}}</p>
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <g clip-path="url(#clip0_438_777)">
-                                <path
-                                    d="M17.1834 7.04158C16.3084 3.19159 12.9501 1.45825 10.0001 1.45825C10.0001 1.45825 10.0001 1.45825 9.99175 1.45825C7.05008 1.45825 3.68341 3.18325 2.80841 7.03325C1.83341 11.3333 4.46675 14.9749 6.85008 17.2666C7.73341 18.1166 8.86675 18.5416 10.0001 18.5416C11.1334 18.5416 12.2667 18.1166 13.1417 17.2666C15.5251 14.9749 18.1584 11.3416 17.1834 7.04158ZM10.0001 11.2166C8.55008 11.2166 7.37508 10.0416 7.37508 8.59158C7.37508 7.14159 8.55008 5.96658 10.0001 5.96658C11.4501 5.96658 12.6251 7.14159 12.6251 8.59158C12.6251 10.0416 11.4501 11.2166 10.0001 11.2166Z"
-                                    fill="#323232"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_438_777">
-                                    <rect width="20" height="20" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <input type="text" name="address" class="font-work text-[#999999] text-lg pl-1">Surakarta, Jawa
-                        Tengah</input>
+        <form action="/profile/{{auth()->user()->id}}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <div class="pt-[100px] pl-[84px]">
+                <div class="flex items-center justify-between">
+                    <div class="flex">
+                        <div class="w-32 h-32 overflow-hidden rounded-full">
+                            <img class="w-full h-full object-cover"
+                                 src="{{ $user->avatar ? asset('storage/' . $user->avatar) : asset('images/ava.png') }}"
+                                 alt=""/>
+                        </div>
+                        <div class="flex flex-col pt-11 pl-5">
+                            <input type="text" name="name"
+                                   class="border border-[#EDEDED] rounded-md font-playfair text-hitam-300 font-medium px-4 py-2 text-4xl"
+                                   value="{{$user->name}}">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <g clip-path="url(#clip0_438_777)">
+                                        <path
+                                            d="M17.1834 7.04158C16.3084 3.19159 12.9501 1.45825 10.0001 1.45825C10.0001 1.45825 10.0001 1.45825 9.99175 1.45825C7.05008 1.45825 3.68341 3.18325 2.80841 7.03325C1.83341 11.3333 4.46675 14.9749 6.85008 17.2666C7.73341 18.1166 8.86675 18.5416 10.0001 18.5416C11.1334 18.5416 12.2667 18.1166 13.1417 17.2666C15.5251 14.9749 18.1584 11.3416 17.1834 7.04158ZM10.0001 11.2166C8.55008 11.2166 7.37508 10.0416 7.37508 8.59158C7.37508 7.14159 8.55008 5.96658 10.0001 5.96658C11.4501 5.96658 12.6251 7.14159 12.6251 8.59158C12.6251 10.0416 11.4501 11.2166 10.0001 11.2166Z"
+                                            fill="#323232"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_438_777">
+                                            <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <input type="text" name="address"
+                                       class="border border-[#EDEDED] rounded-md px-4 py-2 font-work"
+                                       value="{{$user->address}}">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pt-20 pr-20">
+                        <button type="submit"
+                                class="py-[10px] px-4 border border-[#CECECE] rounded-lg font-medium hover:text-white hover:bg-hitam-300">
+                            Save Changes
+                        </button>
                     </div>
 
                 </div>
-                <div class="ml-[808px] pt-20">
-                    <button type="submit"
-                            class="py-[10px] px-4 border border-[#CECECE] rounded-lg font-medium hover:text-white hover:bg-hitam-300">
-                        Save
-                        Changes
-                    </button>
+                <div class="flex flex-col gap-1 pt-3">
+                    <label
+                        class="block font-work mb-2 text-sm font-medium text-gray-900"
+                        for="file_input"
+                    >Upload picture</label
+                    >
+                    <input
+                        class="block w-1/5 text-sm text-gray-900 rounded-sm border cursor-pointer focus:outline-none"
+                        aria-describedby="file_input_help"
+                        id="file_input"
+                        type="file"
+                        name="avatar"
+                    />
                 </div>
-            </form>
-        </div>
+                <div class="">
+                    <div class="flex flex-col">
+                        <p
+                            class="font-work font-medium text-hitam-300 text-xl mt-10"
+                        >
+                            Description
+                        </p>
+                        <textarea
+                            name="description"
+                            id="description"
+                            cols="30"
+                            rows="10"
+                            class="h-[255px] mt-6 border border-[#EDEDED] rounded-md py-7 px-7 font-work"
+                            placeholder="Edit Description"
+                        >{{$user->description}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
     </header>
 </x-layout>
